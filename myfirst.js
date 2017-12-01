@@ -9,5 +9,6 @@ http.createServer(function (req, res) {
     let q = url.parse(req.url, true).query;
     let text = q.year + " " + q.month;
     // http://localhost:8080/?year=2017&month=July returns 2017 July
+    console.log(q);
     res.end(text);
 }).listen(8080);
